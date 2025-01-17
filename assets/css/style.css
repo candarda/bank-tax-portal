@@ -1,0 +1,202 @@
+:root {
+    --vodafone-red: #e60000;
+    --vodafone-gray: #4a4d4e;
+    --vodafone-light-gray: #f5f5f5;
+    --vodafone-border: #e4e4e4;
+}
+
+/* General Styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--vodafone-light-gray);
+    font-family: 'Vodafone', Arial, sans-serif;
+    color: var(--vodafone-gray);
+}
+
+.vodafone-body {
+    background-color: #fff;
+}
+
+main {
+    flex: 1;
+}
+
+/* Header Styles */
+.vodafone-header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--vodafone-border);
+}
+
+.vodafone-header .logo {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Form Styles */
+.form-label {
+    font-weight: 500;
+    color: var(--vodafone-gray);
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    border: 2px solid var(--vodafone-border);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: var(--vodafone-gray);
+}
+
+.form-control:focus {
+    border-color: var(--vodafone-red);
+    box-shadow: 0 0 0 0.2rem rgba(230, 0, 0, 0.15);
+}
+
+.form-control.is-invalid {
+    border-color: var(--vodafone-red);
+    background-image: none;
+}
+
+.form-control-lg {
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+}
+
+.input-group .btn {
+    border-color: var(--vodafone-border);
+    border-width: 2px;
+    padding: 0.75rem 1rem;
+}
+
+.input-group .form-control {
+    border-right: none;
+}
+
+.input-group .btn {
+    border-left: none;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--vodafone-red);
+    border-color: var(--vodafone-red);
+    padding: 1rem 2rem;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #cc0000;
+    border-color: #cc0000;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(230, 0, 0, 0.2);
+}
+
+.btn-lg {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #fff;
+    border-top: 1px solid var(--vodafone-border);
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: var(--vodafone-gray);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 0.875rem;
+}
+
+.footer-links a:hover {
+    color: var(--vodafone-red);
+}
+
+/* Text Styles */
+h1 {
+    color: var(--vodafone-gray);
+    font-weight: 500;
+    font-size: 1.75rem;
+}
+
+.form-text {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+a {
+    color: var(--vodafone-red);
+}
+
+a:hover {
+    color: #cc0000;
+}
+
+/* Alert Styles */
+.alert {
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: none;
+}
+
+.alert-danger {
+    background-color: #fff2f2;
+    color: #cc0000;
+}
+
+.alert-success {
+    background-color: #f2fff2;
+    color: #008000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .footer-links a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .vodafone-header .logo {
+        height: 32px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .btn-lg {
+        font-size: 1rem;
+        padding: 0.875rem 1.75rem;
+    }
+}
