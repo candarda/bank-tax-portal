@@ -33,70 +33,75 @@ export default function Home() {
   };
 
   return (
-    <div className="vodafone-body">
-      <header className="vodafone-header">
-        <div className="container">
-          <img src="/images/vodafone.png" alt="Vodafone" className="logo" />
+    <div className="min-h-screen bg-gray-100">
+      <header className="bg-white shadow">
+        <div className="max-w-7xl mx-auto py-6 px-4">
+          <img src="/vodafone.png" alt="Vodafone" className="h-8" />
         </div>
       </header>
 
-      <main className="container py-5">
-        <div className="row justify-content-center">
-          <div className="col-md-6">
-            <div className="card shadow">
-              <div className="card-body p-4">
-                <h1 className="text-center mb-4">Willkommen</h1>
-                
-                {error && (
-                  <div className="alert alert-danger">{error}</div>
-                )}
-
-                <form onSubmit={handleSubmit}>
-                  <div className="mb-3">
-                    <label htmlFor="email" className="form-label">E-Mail</label>
-                    <input
-                      type="email"
-                      className="form-control form-control-lg"
-                      id="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
-                  </div>
-
-                  <div className="mb-4">
-                    <label htmlFor="password" className="form-label">Passwort</label>
-                    <input
-                      type="password"
-                      className="form-control form-control-lg"
-                      id="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      required
-                    />
-                  </div>
-
-                  <div className="d-grid">
-                    <button type="submit" className="btn btn-primary btn-lg">
-                      Weiter
-                    </button>
-                  </div>
-                </form>
+      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div className="px-4 py-6 sm:px-0">
+          <div className="bg-white shadow rounded-lg p-6">
+            <h1 className="text-2xl font-bold mb-4">Willkommen</h1>
+            
+            {error && (
+              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                {error}
               </div>
-            </div>
+            )}
+
+            <form onSubmit={handleSubmit}>
+              <div className="mb-4">
+                <label htmlFor="email" className="block text-gray-700 mb-2">
+                  E-Mail
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  className="w-full px-3 py-2 border rounded-lg"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+
+              <div className="mb-6">
+                <label htmlFor="password" className="block text-gray-700 mb-2">
+                  Passwort
+                </label>
+                <input
+                  type="password"
+                  id="password"
+                  className="w-full px-3 py-2 border rounded-lg"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700"
+              >
+                Weiter
+              </button>
+            </form>
           </div>
         </div>
       </main>
 
-      <footer className="footer mt-auto py-3">
-        <div className="container text-center">
-          <div className="footer-links">
-            <a href="#">Impressum</a>
-            <a href="#">Datenschutz</a>
-            <a href="#">AGB</a>
-            <a href="#">Hilfe</a>
+      <footer className="bg-white border-t">
+        <div className="max-w-7xl mx-auto py-6 px-4 text-center">
+          <div className="space-x-4">
+            <a href="#" className="text-gray-600 hover:text-gray-900">Impressum</a>
+            <a href="#" className="text-gray-600 hover:text-gray-900">Datenschutz</a>
+            <a href="#" className="text-gray-600 hover:text-gray-900">AGB</a>
+            <a href="#" className="text-gray-600 hover:text-gray-900">Hilfe</a>
           </div>
-          <p className="mt-2 text-muted">&copy; {new Date().getFullYear()} Vodafone GmbH</p>
+          <p className="mt-2 text-gray-600">
+            &copy; {new Date().getFullYear()} Vodafone GmbH
+          </p>
         </div>
       </footer>
     </div>
