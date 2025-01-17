@@ -1,11 +1,6 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
+  "framework": "nextjs",
   "env": {
     "POSTGRES_URL": "${POSTGRES_URL}",
     "POSTGRES_PRISMA_URL": "${POSTGRES_PRISMA_URL}",
